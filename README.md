@@ -1,6 +1,8 @@
 # Evaluate text sentiment using Natural Language Processing (NLP)
 
-- Sentiment Analysis via the MeaningCloudAPI
+- Build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites.
+
+- Sentiment Analysis via the MeaningCloudAPI.
 
 ## Instructions
 
