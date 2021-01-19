@@ -10,6 +10,9 @@
 
 `> npm install.`
 
+- Create a new `.env` file in the root of your project.
+- Fill the `.env` file with your API keys like this: `API_KEY=**************************`
+
 ## To run project
 1. Open two terminals in project directory.
 2. In the second terminal window: Build the code `> npm run build-prod`
