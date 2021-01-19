@@ -6,8 +6,8 @@
 
 - Clone project directory. Install everything via the commands below:
 
-`> cd <project directory>
- > npm install.`
+`> cd <project directory> \n`
+`> npm install.`
 
 ## To run project
 1. Open two terminals in project directory.
