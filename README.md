@@ -19,4 +19,5 @@
 
 ## To run Jest tests
 `> cd <project directory>`
+
 `> npm run test`
