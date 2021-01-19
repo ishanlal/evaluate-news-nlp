@@ -2,19 +2,30 @@ function handleSubmit(event) {
     event.preventDefault()
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    Client.checkForURL(formText)
     console.log("::: Form Submitted :::")
     postData('http://localhost:8081/addData', {ft: formText})
-    fetch('http://localhost:8081/all')
-    .then(res => res.json())
+    updateUI()
+    /*fetch('http://localhost:8081/all')
     .then(function(res) {
-        document.getElementById('score_tag').innerHTML = res.data.score_tag;
-        document.getElementById('agreement').innerHTML = res.data.agreement;
-        document.getElementById('subjectivity').innerHTML = res.data.subjectivity;
-        document.getElementById('confidence').innerHTML = res.data.confidence;
-        document.getElementById('irony').innerHTML = res.data.irony;
-        ;
-    })
+      try {
+        return res.json()
+      }catch {
+      console.log("error", error);
+    }
+  }
+    )
+    .then(function(res) {
+      try{
+      document.getElementById('score_tag').innerHTML = res.data.score_tag;
+      document.getElementById('agreement').innerHTML = res.data.agreement;
+      document.getElementById('subjectivity').innerHTML = res.data.subjectivity;
+      document.getElementById('confidence').innerHTML = res.data.confidence;
+      document.getElementById('irony').innerHTML = res.data.irony;
+    }catch {
+      console.log("error", error);
+    }
+  })*/
 }
 
 export { handleSubmit }
@@ -36,3 +47,20 @@ const postData = async ( url = '', data = {})=>{
     console.log("error", error);
     }
 };
+
+
+// Update UI Elements
+const updateUI = async () => {
+  const request = await fetch('http://localhost:8081/all');
+  try{
+    const res = await request.json();
+    console.log(res)
+    document.getElementById('score_tag').innerHTML = res.data.score_tag;
+    document.getElementById('agreement').innerHTML = res.data.agreement;
+    document.getElementById('subjectivity').innerHTML = res.data.subjectivity;
+    document.getElementById('confidence').innerHTML = res.data.confidence;
+    document.getElementById('irony').innerHTML = res.data.irony;
+  }catch(error){
+    console.log("error", error);
+  }
+}

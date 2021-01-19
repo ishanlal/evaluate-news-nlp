@@ -56,6 +56,7 @@ function addData (req,res){
     .then(function(apiData){
       projectData = {data: apiData};
       console.log(projectData);
+      return projectData;
     })
 };
 
