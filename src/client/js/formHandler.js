@@ -5,7 +5,7 @@ function handleSubmit(event) {
     Client.checkForURL(formText)
     console.log("::: Form Submitted :::")
     postData('http://localhost:8081/addData', {ft: formText})
-    updateUI()
+    .then( () =>updateUI())
     /*fetch('http://localhost:8081/all')
     .then(function(res) {
       try {
