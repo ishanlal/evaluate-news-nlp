@@ -26,3 +26,11 @@
 `> cd <project directory>`
 
 `> npm run test`
+
+# Screenshots
+
+<img src='./homeScreen.png' height='50%' width='50%' alt='Home Screen Screenshot' />
+<img src='./positive_sentiment_results.png' height='50%' width='50%' alt='Sentiment Results Screenshot' />
+<img src='./positive_meaningCloud_console.png' height='50%' width='50%' alt='Meaning Cloud Screenshot' />
+<img src='./negative_sentiment_results.png' height='50%' width='50%' alt='Sentiment Results Screenshot' />
+<img src='./negative_meaningCloud_console.png' height='50%' width='50%' alt='Meaning Cloud Screenshot' />
